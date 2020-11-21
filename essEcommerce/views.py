@@ -8,3 +8,6 @@ def all_product(request):
         'products':products,
     }
     return render(request, 'essEcommerce/all_product.html', context)
+
+def cart(request):
+    return render(request, 'essEcommerce/cart.html')
