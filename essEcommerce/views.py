@@ -15,7 +15,11 @@ def cart(request):
         order , create = Order.objects.get_or_create(customer=customer, status=False)
         items = order.orderitem_set.all()
     else:
-        pass
+        items = []
+        order = {
+            'get_cart_total':0,
+            'get_cart_total_price':0
+        }
     context = {
         'order':order,
         'items':items,
