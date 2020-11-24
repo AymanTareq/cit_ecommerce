@@ -25,3 +25,6 @@ def cart(request):
         'items':items,
     }
     return render(request, 'essEcommerce/cart.html', context)
+
+def check_out(request):
+    return render(request, 'essEcommerce/checkout.html')
